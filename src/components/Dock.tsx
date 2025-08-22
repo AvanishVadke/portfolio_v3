@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 import { FileText } from "lucide-react";
 
 const items = [
@@ -10,11 +11,72 @@ const items = [
 ];
 
 export default function Dock() {
+  const [active, setActive] = useState<string>("home");
   const onClick = (id: string) => (e: React.MouseEvent) => {
     e.preventDefault();
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    setActive(id);
   };
+
+  // Scrollspy using scroll + rAF for smooth updates
+  useEffect(() => {
+    const ids = items.map((i) => i.id);
+    const els = ids
+      .map((id) => document.getElementById(id))
+      .filter(Boolean) as HTMLElement[];
+    if (els.length === 0) return;
+
+    let ticking = false;
+    const pickActive = () => {
+      // If we're basically at the very top, force Home as active.
+      const docEl = document.documentElement;
+      const scrollY = window.scrollY || docEl.scrollTop || 0;
+      if (scrollY <= 8) {
+        setActive((prev) => (prev === "home" ? prev : "home"));
+        return;
+      }
+
+      // If we're basically at the very bottom, force the last section as active.
+      const winH = window.innerHeight;
+      const bottomGap = (docEl.scrollHeight || 0) - (scrollY + winH);
+      if (bottomGap <= 24) {
+        const lastId = els[els.length - 1].id;
+        setActive((prev) => (prev === lastId ? prev : lastId));
+        return;
+      }
+
+      // Compute a document-level probe and select the last section whose top <= probe.
+  const probeDoc = scrollY + winH * 0.35; // 35% from top of viewport
+      let currentId = els[0].id;
+      for (const el of els) {
+        const topDoc = el.getBoundingClientRect().top + scrollY; // element's top relative to document
+        if (topDoc <= probeDoc) {
+          currentId = el.id;
+        } else {
+          break;
+        }
+      }
+      setActive((prev) => (prev === currentId ? prev : currentId));
+    };
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(() => {
+          pickActive();
+          ticking = false;
+        });
+      }
+    };
+
+    pickActive();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, []);
 
   return (
     <nav
@@ -31,8 +93,13 @@ export default function Dock() {
               key={`link-${id}`}
               href={`#${id}`}
               onClick={onClick(id)}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-white/85 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 text-xs sm:text-sm"
+              className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 text-xs sm:text-sm transition-colors relative after:content-["""] after:absolute after:left-2 after:right-2 after:-bottom-1 after:h-0.5 after:rounded-full after:transition-transform after:duration-300 after:origin-left ${
+                active === id
+                  ? "text-blue-300 after:bg-blue-400 after:scale-x-100"
+                  : "text-white/85 hover:text-white after:bg-blue-400/80 after:scale-x-0"
+              } active:brightness-110`}
               aria-label={`Go to ${label}`}
+              aria-current={active === id ? "page" : undefined}
             >
               {label}
             </a>
