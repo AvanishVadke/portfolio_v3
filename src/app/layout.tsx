@@ -14,8 +14,13 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Avanish Vadke — Full Stack Developer",
+  title: "Avanish Vadke — Software Developer",
   description: "Minimalist portfolio with smooth animations and curated projects.",
+  icons: {
+    icon: "/weblogo.png",
+    shortcut: "/weblogo.png",
+    apple: "/weblogo.png",
+  },
 };
 
 export default function RootLayout({
@@ -24,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+  <html lang="en">
   <body className={`${geistSans.variable} ${jetbrains.variable} antialiased bg-black text-white`}>
         {children}
       </body>

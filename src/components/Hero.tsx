@@ -46,7 +46,7 @@ export default function Hero() {
 
         <div className="inline-flex items-center gap-2 text-blue-400/90 mt-4">
           <Sparkles className="size-5" aria-hidden />
-          <span className="text-xs tracking-widest uppercase">Computer Engineering Student — Full Stack Developer</span>
+          <span className="text-xs tracking-widest uppercase">Computer Engineering Student — Software Developer</span>
         </div>
 
         <div className="mt-8 flex items-center justify-center gap-4">

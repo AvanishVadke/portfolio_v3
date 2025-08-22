@@ -16,8 +16,8 @@ const items = [
 		title: "Smt. Sulochanadevi Singhania School",
 		description: (
 			<p className="text-neutral-300">
-				Completed schooling with a strong foundation in mathematics and science;
-				actively participated in tech activities.
+				Completed schooling with a strong foundation in mathematics ,science and computer applications(Java)
+				
 			</p>
 		),
 	},
@@ -27,7 +27,17 @@ const items = [
 		title: "Junior College (HSC)",
 		description: (
 			<p className="text-neutral-300">
-				Focused on Physics, Chemistry, and Mathematics; developed interest in software development.
+				Focused on Physics, Chemistry, and Mathematics.
+			</p>
+		),
+	},
+	{
+		id: 3,
+		date: "2022 – Present",
+		title: "A. P. Shah Institute of Technology (APSIT) — B.E. Computer Engineering",
+		description: (
+			<p className="text-neutral-300">
+				Undergraduate studies in Computer Engineering.
 			</p>
 		),
 	},

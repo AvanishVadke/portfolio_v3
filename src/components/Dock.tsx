@@ -39,7 +39,7 @@ export default function Dock() {
           href="/resume"
           target="_blank"
           rel="noopener"
-          className="ml-2 inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-blue-200 hover:text-white border border-white/20 hover:border-white/30 transition-colors text-sm"
+          className="ml-2 inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-blue-200 hover:text-white border border-white/20 hover:border-white/30 transition-colors text-sm"
           aria-label="Open resume"
         >
           <FileText className="size-4" /> Resume
