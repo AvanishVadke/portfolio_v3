@@ -10,8 +10,8 @@ export default function Experience() {
           </div>
           <ul className="mt-3 list-disc pl-6 text-neutral-300 space-y-1">
             <li>Lead a team of developers in designing and implementing technical solutions for college club activities.</li>
-            <li>Architected and developed the official Coders Club website using Next.js, JavaScript, and Firebase.</li>
-            <li>Built a full-stack Attendance Management System for club activities, replacing legacy methods.</li>
+            <li>Architected and developed the official Coders Club website using Vite(ReactJS), JavaScript, and Firebase.</li>
+            <li>Built a full-stack Attendance Management System for club activities, replacing legacy methods. Using NextJS, express, PostgreSQL and Prisma ORM</li>
             <li>Developed reporting features with class-wise, session-wise, and year-wise insights.</li>
             <li>Organized and managed events in collaboration with cross-functional student teams.</li>
           </ul>
