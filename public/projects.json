@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Coders Club Website (CodersHub)",
+    "description": "Official website for Coders Club APSIT with 400+ members. Includes notes, blogs, projects, events, role-based permissions, and real-time updates.",
+    "technologies": ["Vite", "JavaScript", "TailwindCSS", "Supabase", "PostgreSQL", "Supabase Auth"],
+    "visibility": "private",
+    "liveDemo": "https://codersclub.apsit.edu.in"
+  },
+  {
+    "title": "Attendance Management System",
+    "description": "Full-stack system to digitize attendance workflows with filtering, reporting, Excel exports, and role-based login.",
+    "technologies": ["Next.js", "Node.js", "Express.js", "PostgreSQL"],
+    "visibility": "private",
+    "liveDemo": "https://attendance-management-cc.vercel.app/"
+  },
+  {
+    "title": "Job Hunt - Full Stack Job Portal",
+    "description": "Job portal with recruiter/job seeker dashboards, resume parser, job tracking, and secure auth with Clerk + Supabase.",
+    "technologies": ["Javascript", "Vite", "TailwindCSS", "shadCN UI", "Supabase", "Clerk"],
+    "visibility": "public",
+    "repo": "https://github.com/AvanishVadke/JobHunt",
+    "liveDemo": "https://job-hunt-sooty.vercel.app/"
+  },
+  {
+    "title": "JobFinder - React Native App",
+    "description": "Cross-platform mobile app for job search with offline mode, push notifications, and geolocation listings.",
+    "technologies": ["React Native", "Expo", "Redux", "Firebase"],
+    "visibility": "public",
+    "repo": "https://github.com/AvanishVadke/JobFinder"
+  },
+  {
+    "title": "Firebase Auth 2.0 - Template",
+    "description": "Starter template for Firebase Authentication supporting Google sign-in, password reset, reusable UI, and error handling.",
+    "technologies": ["React.js", "Firebase", "JavaScript"],
+    "visibility": "public",
+    "repo": "https://github.com/AvanishVadke/Firebase-auth-2.0",
+    "liveDemo": "https://email-and-auth-app.web.app/"
+  },
+  {
+    "title": "FitSwitch - Fitness Mobile Application",
+    "description": "Android app with BMI calculator, heart rate monitoring, workout dashboard, and Firebase sync.",
+    "technologies": ["Java", "Android SDK", "XML", "Firebase"],
+    "visibility": "public"
+  },
+  {
+    "title": "VibeX - Offline Music Player",
+    "description": "Kotlin-based offline music player with playlists, RoomDB storage, and night mode.",
+    "technologies": ["Kotlin", "Android SDK", "Room Database", "XML"],
+    "visibility": "public"
+  }
+]
