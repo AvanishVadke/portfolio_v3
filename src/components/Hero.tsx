@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import { ArrowDown, Sparkles } from "lucide-react";
+import { ArrowDown, Sparkles, FileText } from "lucide-react";
+import dynamic from "next/dynamic";
+const DarkVeil = dynamic(() => import("./DarkVeil"), { ssr: false });
 
 export default function Hero() {
   const fullName = "Avanish Vadke";
@@ -29,38 +31,41 @@ export default function Hero() {
 
   return (
     <section id="home" aria-label="Hero" className="relative min-h-[92vh] grid place-items-center overflow-hidden">
-      {/* Grid/gradient background */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,_rgba(37,99,235,0.15),_transparent_35%),radial-gradient(circle_at_80%_30%,_rgba(29,78,216,0.12),_transparent_35%)]" />
-      <div aria-hidden className="absolute inset-0 bg-[linear-gradient(to_bottom,_rgba(255,255,255,0.04),_transparent)]" />
-      <div aria-hidden className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px)] [background-size:48px_48px]" />
+      {/* Background: swap grid for DarkVeil on this branch */}
+      <div aria-hidden className="absolute inset-0">
+        <DarkVeil hueShift={0} noiseIntensity={0.03} scanlineIntensity={0.1} scanlineFrequency={6.0} warpAmount={0.02} />
+      </div>
 
-      <div className="relative z-10 max-w-3xl text-center px-6">
-        <div className="inline-flex items-center gap-2 text-blue-400/90 mb-4">
-          <Sparkles className="size-5" aria-hidden />
-          <span className="text-xs tracking-widest uppercase">Full Stack Developer</span>
-        </div>
+  <div className="relative z-10 max-w-3xl text-center px-6">
+        
 
         <h1 className="font-mono text-4xl sm:text-5xl md:text-6xl font-bold text-white">
           <span className="align-baseline">{typed}</span>
           <span className="ml-1 inline-block w-[1ch] bg-white animate-[blink_1s_steps(1)_infinite]" aria-hidden />
         </h1>
 
-        <p className="mt-5 text-neutral-300 text-base sm:text-lg">
-          I craft performant web apps with clean architecture, delightful UX, and robust, scalable code.
-        </p>
+        <div className="inline-flex items-center gap-2 text-blue-400/90 mt-4">
+          <Sparkles className="size-5" aria-hidden />
+          <span className="text-xs tracking-widest uppercase">Computer Engineering Student — Full Stack Developer</span>
+        </div>
 
         <div className="mt-8 flex items-center justify-center gap-4">
           <button onClick={scrollTo("projects")} className="px-5 py-2.5 rounded-md bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400">
             View Projects
           </button>
-          <button onClick={scrollTo("contact")} className="px-5 py-2.5 rounded-md border border-white/15 text-white/90 hover:text-white hover:border-white/25 text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
+          <button onClick={scrollTo("connect")} className="px-5 py-2.5 rounded-md border border-white/15 text-white/90 hover:text-white hover:border-white/25 text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
             Get In Touch
           </button>
+          <a href="/resume" target="_blank" rel="noopener" className="px-5 py-2.5 rounded-md border border-white/15 text-blue-200 hover:text-white hover:border-white/25 text-sm font-medium transition-colors inline-flex items-center gap-2">
+            <FileText className="size-4" /> Resume
+          </a>
         </div>
 
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-6 text-white/70 animate-bounce" aria-hidden>
-          <ArrowDown className="size-6" />
-        </div>
+      </div>
+      
+      {/* Scroll indicator positioned above the dock */}
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-24 sm:bottom-24 text-white/70 animate-bounce z-10" aria-hidden>
+        <ArrowDown className="size-6" />
       </div>
 
       <style jsx>{`

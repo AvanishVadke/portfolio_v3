@@ -31,10 +31,10 @@ export default function Projects() {
   }, [projects]);
 
   return (
-    <section id="projects" aria-label="Projects" className="py-16 sm:py-24">
+    <section id="projects" aria-label="Projects" className="py-12 sm:py-16">
       <div className="max-w-5xl mx-auto px-6">
         <header className="mb-8">
-          <h2 className="font-mono text-2xl sm:text-3xl font-bold text-white">Selected Projects</h2>
+          <h2 className="font-mono text-2xl sm:text-3xl font-bold text-white">Projects</h2>
           <p className="mt-2 text-neutral-300">A snapshot of things I’ve built and shipped recently.</p>
         </header>
 
