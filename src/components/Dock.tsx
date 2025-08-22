@@ -17,9 +17,14 @@ export default function Dock() {
   };
 
   return (
-    <nav aria-label="Primary" className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-full px-3 sm:px-0">
-      <div className="mx-auto max-w-[min(560px,100%)] overflow-x-auto scrollbar-none">
-        <div className="backdrop-blur-lg bg-white/5 border border-white/20 shadow-[0_8px_30px_rgba(0,0,0,0.12)] rounded-full px-2 sm:px-3 py-1.5 sm:py-2 flex items-center whitespace-nowrap">
+    <nav
+      aria-label="Primary"
+      className="fixed inset-x-0 z-50 pointer-events-none"
+      style={{ bottom: "max(1rem, env(safe-area-inset-bottom))" }}
+    >
+      <div className="flex justify-center px-3 sm:px-0">
+        <div className="pointer-events-auto inline-flex max-w-full overflow-x-auto scrollbar-none">
+          <div className="inline-flex items-center whitespace-nowrap backdrop-blur-lg bg-white/5 border border-white/20 shadow-[0_8px_30px_rgba(0,0,0,0.12)] rounded-full px-2 sm:px-3 py-1.5 sm:py-2">
         {items.flatMap(({ id, label }, idx) => [
           (
             <a
@@ -36,15 +41,27 @@ export default function Dock() {
             <span key={`sep-${id}`} aria-hidden className="h-5 w-px bg-white/20" />
           ) : null,
         ])}
+        {/* Mobile: icon-only resume */}
         <a
           href="https://drive.google.com/file/d/1eVP5qVA36hoBQyWeeXK_1z1McAmTQ6uy/view?usp=sharing"
           target="_blank"
           rel="noopener"
-          className="ml-2 inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-blue-200 hover:text-white border border-white/20 hover:border-white/30 transition-colors text-xs sm:text-sm"
+          className="ml-2 inline-flex sm:hidden items-center justify-center p-2 rounded-full text-blue-200 hover:text-white border border-white/20 hover:border-white/30 transition-colors"
+          aria-label="Open resume"
+        >
+          <FileText className="size-4" />
+          <span className="sr-only">Resume</span>
+        </a>
+        <a
+          href="https://drive.google.com/file/d/1eVP5qVA36hoBQyWeeXK_1z1McAmTQ6uy/view?usp=sharing"
+          target="_blank"
+          rel="noopener"
+          className="ml-2 hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-blue-200 hover:text-white border border-white/20 hover:border-white/30 transition-colors text-xs sm:text-sm"
           aria-label="Open resume"
         >
           <FileText className="size-4" /> Resume
         </a>
+          </div>
         </div>
       </div>
     </nav>
