@@ -1,3 +1,9 @@
+/**
+ * TimelineExample
+ *
+ * A minimal example showcasing the Origin UI Timeline primitives.
+ * This component is not used by the app directly; it's here as a reference/demo.
+ */
 import {
   Timeline,
   TimelineContent,
@@ -40,7 +46,7 @@ const items = [
   },
 ]
 
-export default function Component() {
+export default function TimelineExample() {
   return (
     <Timeline defaultValue={3}>
       {items.map((item) => (
