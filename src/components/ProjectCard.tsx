@@ -14,7 +14,7 @@ export default function ProjectCard({ project }: { project: Project }) {
   const isPublic = visibility === "public";
 
   return (
-    <article className="group rounded-xl border border-white/10 bg-white/5 hover:bg-white/[0.07] transition-colors transform-gpu will-change-transform duration-200 p-5 sm:p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] hover:shadow-[0_10px_25px_-10px_rgba(37,99,235,0.45)] hover:scale-[1.01]">
+    <article className="group rounded-xl border border-white/10 bg-white/5 hover:bg-white/[0.07] transition-colors transform-gpu will-change-transform duration-200 p-5 sm:p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] hover:shadow-[0_10px_25px_-10px_rgba(147,51,234,0.45)] hover:scale-[1.01]">
       <header className="flex items-start justify-between gap-3">
         <h3 className="text-white text-lg font-semibold font-mono">{title}</h3>
         {isPublic ? (
@@ -28,7 +28,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 
       <ul className="mt-4 flex flex-wrap gap-2">
         {technologies.map((tech) => (
-          <li key={tech} className="text-[11px] text-blue-200/90 bg-blue-500/10 border border-blue-400/20 rounded px-2 py-1">
+          <li key={tech} className="text-[11px] text-purple-200/90 bg-purple-500/10 border border-purple-400/20 rounded px-2 py-1">
             {tech}
           </li>
         ))}
@@ -41,7 +41,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`View ${title} live demo`}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-500 text-white text-xs font-medium transition-colors"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-purple-600 hover:bg-purple-500 text-white text-xs font-medium transition-colors"
           >
             <ExternalLink className="size-4" /> View Live
           </a>

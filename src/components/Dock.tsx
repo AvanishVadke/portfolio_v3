@@ -100,8 +100,8 @@ export default function Dock() {
               onClick={onClick(id)}
               className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 text-xs sm:text-sm transition-colors relative after:content-["""] after:absolute after:left-2 after:right-2 after:-bottom-1 after:h-0.5 after:rounded-full after:transition-transform after:duration-300 after:origin-left ${
                 active === id
-                  ? "text-blue-300 after:bg-blue-400 after:scale-x-100"
-                  : "text-white/85 hover:text-white after:bg-blue-400/80 after:scale-x-0"
+                  ? "text-purple-300 after:bg-purple-400 after:scale-x-100"
+                  : "text-white/85 hover:text-white after:bg-purple-400/80 after:scale-x-0"
               } active:brightness-110`}
               aria-label={`Go to ${label}`}
               aria-current={active === id ? "page" : undefined}
@@ -118,7 +118,7 @@ export default function Dock() {
           href="https://drive.google.com/file/d/1eVP5qVA36hoBQyWeeXK_1z1McAmTQ6uy/view?usp=sharing"
           target="_blank"
           rel="noopener"
-          className="ml-2 inline-flex sm:hidden items-center justify-center p-2 rounded-full text-blue-200 hover:text-white border border-white/20 hover:border-white/30 transition-colors"
+          className="ml-2 inline-flex sm:hidden items-center justify-center p-2 rounded-full text-purple-200 hover:text-white border border-white/20 hover:border-white/30 transition-colors"
           aria-label="Open resume"
         >
           <FileText className="size-4" />
@@ -128,7 +128,7 @@ export default function Dock() {
           href="https://drive.google.com/file/d/1eVP5qVA36hoBQyWeeXK_1z1McAmTQ6uy/view?usp=sharing"
           target="_blank"
           rel="noopener"
-          className="ml-2 hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-blue-200 hover:text-white border border-white/20 hover:border-white/30 transition-colors text-xs sm:text-sm"
+          className="ml-2 hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-purple-200 hover:text-white border border-white/20 hover:border-white/30 transition-colors text-xs sm:text-sm"
           aria-label="Open resume"
         >
           <FileText className="size-4" /> Resume

@@ -4,7 +4,7 @@ function Group({ title, items }: { title: string; items: string[] }) {
       <h3 className="text-white font-mono font-semibold mb-3">{title}</h3>
       <ul className="flex flex-wrap gap-2">
         {items.map((i) => (
-          <li key={i} className="text-[11px] text-blue-200/90 bg-blue-500/10 border border-blue-400/20 rounded px-2 py-1">
+          <li key={i} className="text-[11px] text-purple-200/90 bg-purple-500/10 border border-purple-400/20 rounded px-2 py-1">
             {i}
           </li>
         ))}
