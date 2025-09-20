@@ -19,7 +19,7 @@
     "technologies": ["Javascript", "Vite", "TailwindCSS", "shadCN UI", "Supabase", "Clerk"],
     "visibility": "public",
     "repo": "https://github.com/AvanishVadke/JobHunt",
-    "liveDemo": "https://job-hunt-sooty.vercel.app/"
+    "liveDemo": "https://jobhunt.avanishvadke.me/"
   },
   {
     "title": "JobFinder - React Native App",

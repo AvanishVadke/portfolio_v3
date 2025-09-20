@@ -14,8 +14,13 @@ export default function Dock() {
   const [active, setActive] = useState<string>("home");
   const onClick = (id: string) => (e: React.MouseEvent) => {
     e.preventDefault();
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (id === "home") {
+      // Scroll to the very top for home
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
     setActive(id);
   };
 
