@@ -47,12 +47,12 @@ const MacOSWindow = () => {
       {/* Subtle laser glow */}
       <div className="absolute top-0 w-full h-[1px] bg-gradient-to-r from-transparent via-purple-400/60 to-transparent" />
 
-      {/* MacOS Top Bar */}
+        {/* MacOS Top Bar */}
       <div className="h-7 flex items-center px-4 bg-white/5 border-b border-white/10 rounded-t-2xl">
         <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-[#FF5F56]" />
-          <div className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
-          <div className="w-3 h-3 rounded-full bg-[#27C93F]" />
+          <div className="w-3 h-3 rounded-full bg-[#FF5F56] cursor-pointer hover:brightness-110 transition-all" />
+          <div className="w-3 h-3 rounded-full bg-[#FFBD2E] cursor-pointer hover:brightness-110 transition-all" />
+          <div className="w-3 h-3 rounded-full bg-[#27C93F] cursor-pointer hover:brightness-110 transition-all" />
         </div>
       </div>
 
