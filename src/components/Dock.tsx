@@ -115,7 +115,7 @@ export default function Dock() {
         ])}
         {/* Mobile: icon-only resume */}
         <a
-          href="https://drive.google.com/file/d/1eVP5qVA36hoBQyWeeXK_1z1McAmTQ6uy/view?usp=sharing"
+          href="https://drive.google.com/file/d/1E0rax0QFIXLWEIPXofa-IBTd5vhIKjxn/view?usp=sharing"
           target="_blank"
           rel="noopener"
           className="ml-2 inline-flex sm:hidden items-center justify-center p-2 rounded-full text-purple-200 hover:text-white border border-white/20 hover:border-white/30 transition-colors"
@@ -125,7 +125,7 @@ export default function Dock() {
           <span className="sr-only">Resume</span>
         </a>
         <a
-          href="https://drive.google.com/file/d/1eVP5qVA36hoBQyWeeXK_1z1McAmTQ6uy/view?usp=sharing"
+          href="https://drive.google.com/file/d/1E0rax0QFIXLWEIPXofa-IBTd5vhIKjxn/view?usp=sharing"
           target="_blank"
           rel="noopener"
           className="ml-2 hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-purple-200 hover:text-white border border-white/20 hover:border-white/30 transition-colors text-xs sm:text-sm"
